@@ -1,0 +1,42 @@
+.card {
+  background: #fff;
+  border: 1px solid #d4e4d4;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.title {
+  margin: 0 0 0.5rem;
+  font-size: 1.1rem;
+}
+
+.desc {
+  margin: 0 0 0.5rem;
+  color: #555;
+}
+
+.status {
+  margin: 0 0 0.75rem;
+  font-weight: 500;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.actions select {
+  min-width: 180px;
+  padding: 0.35rem 0.5rem;
+}
+
+.actions button {
+  padding: 0.4rem 0.75rem;
+  background: #2d5a27;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+}
