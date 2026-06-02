@@ -7,3 +7,5 @@ export {
   MissionStatus,
   canTransitionTo,
 } from '@/domain/value-objects/MissionStatus';
+export type { NinjaRepository } from '@/domain/repositories/NinjaRepository';
+export type { MissionRepository } from '@/domain/repositories/MissionRepository';
