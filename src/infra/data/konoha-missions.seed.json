@@ -1,0 +1,30 @@
+[
+  {
+    "id": "m1",
+    "title": "Find the cat",
+    "description": "D-rank mission in Konoha village",
+    "villageId": "konoha",
+    "status": "Available"
+  },
+  {
+    "id": "m2",
+    "title": "Protect the bridge",
+    "description": "Escort mission to the Land of Waves",
+    "villageId": "konoha",
+    "status": "Available"
+  },
+  {
+    "id": "m3",
+    "title": "Retrieve the scroll",
+    "description": "Recover a stolen scroll for the Hokage",
+    "villageId": "konoha",
+    "status": "Available"
+  },
+  {
+    "id": "m4",
+    "title": "Patrol the village gates",
+    "description": "C-rank patrol around Konohagakure",
+    "villageId": "konoha",
+    "status": "Available"
+  }
+]
