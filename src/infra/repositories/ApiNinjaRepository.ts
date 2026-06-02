@@ -17,6 +17,8 @@ import {
   NinjaOverrides,
   parseExternalId,
 } from '@/infra/mappers/NinjaMapper';
+import { CachePort } from '@/infra/cache/CachePort';
+import { KONOHA_CHARACTERS_CACHE_KEY } from '@/infra/cache/cacheKeys';
 import { StoragePort } from '@/infra/storage/StoragePort';
 
 type NinjaOverridesStore = Record<string, NinjaOverrides>;
@@ -25,6 +27,8 @@ export class ApiNinjaRepository implements NinjaRepository {
   constructor(
     private readonly httpClient: AxiosClient,
     private readonly storage: StoragePort,
+    private readonly cache?: CachePort<DattebayoCharacter[]>,
+    private readonly charactersCacheKey: string = KONOHA_CHARACTERS_CACHE_KEY,
   ) {}
 
   async findAll(villageId?: string): Promise<Ninja[]> {
@@ -73,9 +77,15 @@ export class ApiNinjaRepository implements NinjaRepository {
     };
 
     this.storage.set(STORAGE_KEY_NINJA_OVERRIDES, store);
+    this.cache?.delete(this.charactersCacheKey);
   }
 
   private async fetchKonohaCharacters(): Promise<DattebayoCharacter[]> {
+    const cached = this.cache?.get(this.charactersCacheKey);
+    if (cached) {
+      return cached;
+    }
+
     const collected: DattebayoCharacter[] = [];
 
     for (let page = 1; page <= CHARACTERS_MAX_PAGES; page += 1) {
@@ -93,6 +103,7 @@ export class ApiNinjaRepository implements NinjaRepository {
       }
     }
 
+    this.cache?.set(this.charactersCacheKey, collected);
     return collected;
   }
 
