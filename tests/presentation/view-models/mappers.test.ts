@@ -13,6 +13,7 @@ describe('presentation mappers', () => {
       name: 'Naruto Uzumaki',
       villageId: 'konoha',
       externalId: 1344,
+      imageUrl: 'https://example.com/naruto.png',
       rank: NinjaRank.Genin,
       missionHistory: ['m1'],
     });
@@ -23,6 +24,7 @@ describe('presentation mappers', () => {
       rank: NinjaRank.Genin,
       villageId: 'konoha',
       externalId: 1344,
+      imageUrl: 'https://example.com/naruto.png',
       missionHistory: ['m1'],
     });
   });

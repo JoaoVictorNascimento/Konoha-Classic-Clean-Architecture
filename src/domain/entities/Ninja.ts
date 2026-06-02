@@ -6,6 +6,7 @@ export class Ninja {
   readonly name: string;
   readonly villageId: string;
   readonly externalId?: number;
+  readonly imageUrl?: string;
   private _rank: NinjaRank;
   private readonly _missionHistory: string[];
 
@@ -14,6 +15,7 @@ export class Ninja {
     name: string;
     villageId: string;
     externalId?: number;
+    imageUrl?: string;
     rank?: NinjaRank;
     missionHistory?: string[];
   }) {
@@ -29,6 +31,7 @@ export class Ninja {
     this.name = trimmedName;
     this.villageId = params.villageId;
     this.externalId = params.externalId;
+    this.imageUrl = params.imageUrl?.trim() || undefined;
     this._rank = params.rank ?? NinjaRank.Genin;
     this._missionHistory = [...(params.missionHistory ?? [])];
   }
