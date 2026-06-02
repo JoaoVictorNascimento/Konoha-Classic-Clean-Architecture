@@ -1,0 +1,13 @@
+{
+  "id": 1344,
+  "name": "Naruto Uzumaki",
+  "personal": {
+    "affiliation": ["Konohagakure", "Mount Myōboku"]
+  },
+  "rank": {
+    "ninjaRank": {
+      "Part I": "Genin",
+      "Part II": "Kage"
+    }
+  }
+}
