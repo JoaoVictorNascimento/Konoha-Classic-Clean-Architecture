@@ -38,4 +38,19 @@ describe('ApiMissionRepository', () => {
       accept.execute({ missionId: 'm1', ninjaId: 'n1' }),
     ).rejects.toThrow();
   });
+
+  it('persists accept flow across repository reload', async () => {
+    const storage = new InMemoryStorageAdapter();
+    const firstLoad = new ApiMissionRepository(storage);
+    const mission = (await firstLoad.findById('m1'))!;
+
+    mission.accept('ninja-1344');
+    await firstLoad.save(mission);
+
+    const secondLoad = new ApiMissionRepository(storage);
+    const reloaded = await secondLoad.findById('m1');
+
+    expect(reloaded?.status).toBe(MissionStatus.InProgress);
+    expect(reloaded?.assignedNinjaId).toBe('ninja-1344');
+  });
 });
