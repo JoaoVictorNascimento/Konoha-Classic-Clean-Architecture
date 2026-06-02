@@ -5,7 +5,7 @@ import { MemoryRouter } from 'react-router-dom';
 import { MissionStatus } from '@/domain/value-objects/MissionStatus';
 import { MissionListPage } from '@/presentation/pages/MissionListPage';
 import { AppControllersProvider } from '@/presentation/context/AppControllersContext';
-import type { AppControllers } from '@/main/composition';
+import type { AppControllers } from '@/main/factories';
 
 afterEach(() => {
   cleanup();

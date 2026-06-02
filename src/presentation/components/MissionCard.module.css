@@ -1,6 +1,6 @@
 .card {
-  background: #fff;
-  border: 1px solid #d4e4d4;
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-card-border);
   border-radius: 8px;
   padding: 1rem;
   margin-bottom: 1rem;
@@ -13,7 +13,7 @@
 
 .desc {
   margin: 0 0 0.5rem;
-  color: #555;
+  color: var(--color-meta);
 }
 
 .status {
@@ -35,8 +35,8 @@
 
 .actions button {
   padding: 0.4rem 0.75rem;
-  background: #2d5a27;
-  color: #fff;
+  background: var(--color-button-bg);
+  color: var(--color-button-text);
   border: none;
   border-radius: 4px;
 }

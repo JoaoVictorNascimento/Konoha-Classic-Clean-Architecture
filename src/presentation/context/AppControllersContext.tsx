@@ -1,5 +1,5 @@
 import { createContext, useContext, type ReactNode } from 'react';
-import type { AppControllers } from '@/main/composition';
+import type { AppControllers } from '@/main/factories';
 
 const AppControllersContext = createContext<AppControllers | null>(null);
 
