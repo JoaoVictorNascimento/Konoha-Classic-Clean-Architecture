@@ -1,0 +1,32 @@
+.back {
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.heading {
+  margin-top: 0;
+}
+
+.details {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.5rem 1rem;
+  margin-bottom: 1rem;
+}
+
+.details dt {
+  font-weight: 600;
+}
+
+.details ul {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  background: #2d5a27;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+}
