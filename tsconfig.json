@@ -13,7 +13,8 @@
     "resolveJsonModule": true,
     "baseUrl": ".",
     "paths": {
-      "@/domain/*": ["src/domain/*"]
+      "@/domain/*": ["src/domain/*"],
+      "@/infra/*": ["src/infra/*"]
     }
   },
   "include": ["src", "tests", "vite.config.ts", "vitest.config.ts"]
