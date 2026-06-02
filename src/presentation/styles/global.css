@@ -1,0 +1,22 @@
+:root {
+  font-family: system-ui, -apple-system, sans-serif;
+  line-height: 1.5;
+  color: #1a2e1a;
+  background: #f4f7f0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  color: #2d5a27;
+}
+
+button {
+  cursor: pointer;
+}

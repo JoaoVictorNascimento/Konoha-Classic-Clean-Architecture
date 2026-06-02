@@ -3,8 +3,15 @@
     "target": "ES2022",
     "module": "ESNext",
     "moduleResolution": "bundler",
-    "lib": ["ES2022"],
-    "types": ["node"],
+    "lib": [
+      "ES2022",
+      "DOM",
+      "DOM.Iterable"
+    ],
+    "jsx": "react-jsx",
+    "types": [
+      "node"
+    ],
     "strict": true,
     "skipLibCheck": true,
     "noEmit": true,
@@ -13,10 +20,24 @@
     "resolveJsonModule": true,
     "baseUrl": ".",
     "paths": {
-      "@/domain/*": ["src/domain/*"],
-      "@/infra/*": ["src/infra/*"],
-      "@/presentation/*": ["src/presentation/*"]
+      "@/domain/*": [
+        "src/domain/*"
+      ],
+      "@/infra/*": [
+        "src/infra/*"
+      ],
+      "@/presentation/*": [
+        "src/presentation/*"
+      ],
+      "@/main/*": [
+        "src/main/*"
+      ]
     }
   },
-  "include": ["src", "tests", "vite.config.ts", "vitest.config.ts"]
+  "include": [
+    "src",
+    "tests",
+    "vite.config.ts",
+    "vitest.config.ts"
+  ]
 }

@@ -1,0 +1,39 @@
+.layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  background: #2d5a27;
+  color: #fff;
+  padding: 1rem 1.5rem;
+}
+
+.title {
+  margin: 0 0 0.75rem;
+  font-size: 1.25rem;
+}
+
+.nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav a {
+  color: #e8f5e3;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.active {
+  text-decoration: underline;
+}
+
+.main {
+  flex: 1;
+  padding: 1.5rem;
+  max-width: 960px;
+  margin: 0 auto;
+  width: 100%;
+}
