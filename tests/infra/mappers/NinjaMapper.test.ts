@@ -21,6 +21,9 @@ describe('NinjaMapper', () => {
     expect(ninja.name).toBe('Naruto Uzumaki');
     expect(ninja.villageId).toBe('konoha');
     expect(ninja.externalId).toBe(1344);
+    expect(ninja.imageUrl).toBe(
+      'https://static.wikia.nocookie.net/naruto/images/d/d6/Naruto_Part_I.png',
+    );
   });
 
   it('maps highest known rank from API', () => {

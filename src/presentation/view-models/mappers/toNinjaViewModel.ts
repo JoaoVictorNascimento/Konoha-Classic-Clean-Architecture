@@ -8,6 +8,7 @@ export function toNinjaViewModel(ninja: Ninja): NinjaViewModel {
     rank: ninja.rank,
     villageId: ninja.villageId,
     externalId: ninja.externalId,
+    imageUrl: ninja.imageUrl,
     missionHistory: [...ninja.missionHistory],
   };
 }

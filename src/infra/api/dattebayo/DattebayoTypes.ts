@@ -1,6 +1,7 @@
 export interface DattebayoCharacter {
   id: number;
   name: string;
+  images?: string[];
   personal?: {
     affiliation?: string | string[];
   };

@@ -4,5 +4,6 @@ export interface NinjaViewModel {
   rank: string;
   villageId: string;
   externalId?: number;
+  imageUrl?: string;
   missionHistory: string[];
 }

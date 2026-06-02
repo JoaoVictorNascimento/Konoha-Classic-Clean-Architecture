@@ -61,6 +61,11 @@ export function parseExternalId(ninjaId: string): number | null {
   return Number.isNaN(parsed) ? null : parsed;
 }
 
+function pickCharacterImage(character: DattebayoCharacter): string | undefined {
+  const firstImage = character.images?.find((url) => url.trim().length > 0);
+  return firstImage?.trim();
+}
+
 export function mapCharacterToNinja(
   character: DattebayoCharacter,
   overrides?: NinjaOverrides,
@@ -70,6 +75,7 @@ export function mapCharacterToNinja(
     name: character.name,
     villageId: KONOHA_VILLAGE_ID,
     externalId: character.id,
+    imageUrl: pickCharacterImage(character),
     rank: overrides?.rank ?? mapRankFromApi(character.rank?.ninjaRank),
     missionHistory: overrides?.missionHistory ?? [],
   });
