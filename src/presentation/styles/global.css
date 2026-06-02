@@ -19,6 +19,7 @@
   --color-error-bg: #fde8e8;
   --color-error-text: #8b1a1a;
   --color-error-border: #f5b5b5;
+  --color-layout-scrim: rgba(20, 32, 18, 0.42);
 }
 
 [data-theme='dark'] {
@@ -41,6 +42,7 @@
   --color-error-bg: #3a1f1f;
   --color-error-text: #f5b5b5;
   --color-error-border: #6b2a2a;
+  --color-layout-scrim: rgba(0, 0, 0, 0.58);
 }
 
 * {
@@ -52,7 +54,7 @@ body {
   font-family: system-ui, -apple-system, sans-serif;
   line-height: 1.5;
   color: var(--color-text);
-  background: var(--color-bg);
+  background: transparent;
 }
 
 a {
