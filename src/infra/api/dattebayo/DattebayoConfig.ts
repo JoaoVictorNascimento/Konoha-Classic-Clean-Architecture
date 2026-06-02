@@ -1,0 +1,9 @@
+export const DATTEBAYO_BASE_URL = 'https://dattebayo-api.onrender.com';
+export const DATTEBAYO_TIMEOUT_MS = 10_000;
+export const KONOHA_VILLAGE_ID = 'konoha';
+export const KONOHA_AFFILIATION = 'Konohagakure';
+export const NINJA_ID_PREFIX = 'ninja-';
+export const STORAGE_KEY_NINJA_OVERRIDES = 'konoha:ninja-overrides';
+export const STORAGE_KEY_MISSIONS = 'konoha:missions';
+export const CHARACTERS_PAGE_LIMIT = 100;
+export const CHARACTERS_MAX_PAGES = 5;
