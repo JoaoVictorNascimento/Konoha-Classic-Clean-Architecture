@@ -13,6 +13,7 @@ export default defineConfig({
     alias: {
       '@/domain': resolve(__dirname, 'src/domain'),
       '@/infra': resolve(__dirname, 'src/infra'),
+      '@/presentation': resolve(__dirname, 'src/presentation'),
     },
   },
 });
