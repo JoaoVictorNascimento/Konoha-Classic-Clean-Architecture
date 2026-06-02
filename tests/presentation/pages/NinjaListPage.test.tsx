@@ -3,7 +3,7 @@ import { render, screen, waitFor } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 import { NinjaListPage } from '@/presentation/pages/NinjaListPage';
 import { AppControllersProvider } from '@/presentation/context/AppControllersContext';
-import type { AppControllers } from '@/main/composition';
+import type { AppControllers } from '@/main/factories';
 
 function renderPage(controllers: AppControllers) {
   return render(

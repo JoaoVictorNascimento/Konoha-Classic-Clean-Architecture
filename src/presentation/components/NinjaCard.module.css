@@ -1,6 +1,6 @@
 .card {
-  background: #fff;
-  border: 1px solid #d4e4d4;
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-card-border);
   border-radius: 8px;
   padding: 1rem;
 }
@@ -12,5 +12,5 @@
 
 .meta {
   margin: 0;
-  color: #555;
+  color: var(--color-meta);
 }

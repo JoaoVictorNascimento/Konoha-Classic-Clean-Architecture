@@ -4,7 +4,7 @@ import userEvent from '@testing-library/user-event';
 import { MemoryRouter, Route, Routes } from 'react-router-dom';
 import { NinjaDetailsPage } from '@/presentation/pages/NinjaDetailsPage';
 import { AppControllersProvider } from '@/presentation/context/AppControllersContext';
-import type { AppControllers } from '@/main/composition';
+import type { AppControllers } from '@/main/factories';
 
 function renderPage(controllers: AppControllers) {
   return render(

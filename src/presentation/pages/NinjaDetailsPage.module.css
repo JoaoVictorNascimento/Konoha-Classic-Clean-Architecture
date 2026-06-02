@@ -25,8 +25,8 @@
 
 button {
   padding: 0.5rem 1rem;
-  background: #2d5a27;
-  color: #fff;
+  background: var(--color-button-bg);
+  color: var(--color-button-text);
   border: none;
   border-radius: 4px;
 }
