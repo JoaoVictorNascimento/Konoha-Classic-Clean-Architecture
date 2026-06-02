@@ -14,16 +14,18 @@ export function AppLayout() {
       <header className={styles.header}>
         <div className={styles.headerRow}>
           <h1 className={styles.title}>Konoha — Hokage Panel</h1>
-          <ThemeToggle />
+          <div className={styles.headerEnd}>
+            <nav className={styles.nav}>
+              <NavLink to="/ninjas" className={({ isActive }) => (isActive ? styles.active : undefined)}>
+                Ninjas
+              </NavLink>
+              <NavLink to="/missions" className={({ isActive }) => (isActive ? styles.active : undefined)}>
+                Missões
+              </NavLink>
+            </nav>
+            <ThemeToggle />
+          </div>
         </div>
-        <nav className={styles.nav}>
-          <NavLink to="/ninjas" className={({ isActive }) => (isActive ? styles.active : undefined)}>
-            Ninjas
-          </NavLink>
-          <NavLink to="/missions" className={({ isActive }) => (isActive ? styles.active : undefined)}>
-            Missões
-          </NavLink>
-        </nav>
       </header>
       <main className={styles.main}>
         <Outlet />

@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
+import { BackLink } from '@/presentation/components/BackLink';
 import { useAppControllers } from '@/presentation/context/AppControllersContext';
 import type { NinjaViewModel } from '@/presentation/view-models/NinjaViewModel';
 import { LoadingState } from '@/presentation/components/LoadingState';
@@ -65,16 +66,14 @@ export function NinjaDetailsPage() {
     return (
       <section>
         {error && <ErrorAlert message={error} />}
-        <Link to="/ninjas">Voltar para lista</Link>
+        <BackLink />
       </section>
     );
   }
 
   return (
     <section>
-      <Link to="/ninjas" className={styles.back}>
-        ← Voltar
-      </Link>
+      <BackLink />
       <h2 className={styles.heading}>{ninja.name}</h2>
       {error && <ErrorAlert message={error} />}
       <dl className={styles.details}>
