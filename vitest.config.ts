@@ -5,13 +5,18 @@ export default defineConfig({
   test: {
     globals: false,
     environment: 'node',
-    include: ['tests/**/*.test.ts'],
+    include: ['tests/**/*.test.ts', 'tests/**/*.test.tsx'],
+    environmentMatchGlobs: [
+      ['tests/presentation/pages/**', 'jsdom'],
+    ],
+    setupFiles: ['tests/setup.ts'],
   },
   resolve: {
     alias: {
       '@/domain': resolve(__dirname, 'src/domain'),
       '@/infra': resolve(__dirname, 'src/infra'),
       '@/presentation': resolve(__dirname, 'src/presentation'),
+      '@/main': resolve(__dirname, 'src/main'),
     },
   },
 });
